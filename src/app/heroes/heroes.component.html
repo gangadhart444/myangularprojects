@@ -1,0 +1,19 @@
+<h2>My Heroes Example</h2>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<ul class="heroes">
+  <li *ngFor="let hero of heroesVar"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}} <span class="badge">{{hero.isMajor}}</span>
+  </li>
+</ul>
+
+
+
+
+
+<!-- 
+Copyright 2017 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
